@@ -66,7 +66,7 @@ export function ProductsPage() {
     navigate({
       replace: true,
       resetScroll: false,
-      from: APP_ROUTE.public.landingPage,
+      to: APP_ROUTE.private.products,
       search: (prev) => {
         if (prev.page) {
           delete prev.page

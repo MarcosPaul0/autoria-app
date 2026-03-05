@@ -16,6 +16,7 @@ export const Route = createRootRouteWithContext<RouterContext>()({
   head: () => ({
     meta: [
       { title: 'Autoria Loja | Presentes e Personalizados' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         name: 'description',
         content:
