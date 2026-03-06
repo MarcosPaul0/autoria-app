@@ -1,83 +1,57 @@
-import womanOnCellPhoneImg from '@autoria/assets/images/woman-in-cellphone.png'
-import mugResultImg from '@autoria/assets/images/mug-result.png'
-import { LANDING_PAGE_SECTIONS } from '@autoria/constants/landing-page-sections'
-import { CustomerChat } from './customer-chat'
-import { AutoriaChat } from './autoria-chat'
-import { HowItWorksCard } from './how-it-works-card'
+import mugImg from "@autoria/assets/images/mug.png";
+import { LANDING_PAGE_SECTIONS } from "@autoria/constants/landing-page-sections";
+import { WorksItem } from "./works-item";
 
 export function HowItWorksSection() {
-  return (
-    <section
-      className="mx-auto px-4 sm:px-28 py-6 sm:py-20 flex flex-col items-center w-full bg-primary"
-      id={LANDING_PAGE_SECTIONS.works}
-    >
-      <h2 className="text-xl sm:text-4xl font-bold text-primary-foreground">
-        Crie sua caneca do seu jeito!
-      </h2>
+	return (
+		<section
+			className={`
+        mx-auto px-4 sm:px-28 py-12 sm:py-20 flex flex-col sm:flex-row items-center w-full bg-primary 
+        after:content-[''] after:absolute after:size-72 after:bg-primary after:rounded-full 
+        after:blur-3xl after:-top-32 after:left-24 after:brightness-125  justify-center relative overflow-hidden
+        before:content-[''] before:absolute before:size-72 before:bg-primary before:rounded-full
+        before:blur-3xl before:-bottom-32 before:left-96 before:brightness-125 gap-8 sm:gap-96
+      `}
+			id={LANDING_PAGE_SECTIONS.works}
+		>
+			<img
+				src={mugImg}
+				alt="Caneca com estampa personalizada"
+				className="h-[240px] sm:h-[400px] z-10"
+			/>
 
-      <h3 className="text-sm sm:text-2xl mt-2 text-primary-foreground">
-        Aqui você pode criar a sua estampa pensada do zero.
-      </h3>
+			<div className="flex flex-col gap-2 sm:gap-4 z-10">
+				<h2 className="text-2xl sm:text-4xl font-bold text-secondary text-center sm:text-left">
+					Crie sua caneca do seu jeito!
+				</h2>
 
-      <div className="mt-12 grid grid-cols-1 sm:grid-cols-8 grid-rows-2 gap-2 sm:gap-6 max-w-[1920px] w-full ">
-        <HowItWorksCard
-          step="first"
-          title="Chame a gente no WhatsApp"
-          image={
-            <img
-              src={womanOnCellPhoneImg}
-              className="sm:h-[420px] pointer-events-none hidden sm:block"
-              alt="store"
-            />
-          }
-        >
-          <CustomerChat
-            text="Olá! Gostaria de uma caneca personalizada com a imagem dos meus
-                gatinhos, Meg e Django."
-          />
+				<h3 className="text-xl sm:text-2xl text-primary-foreground text-center sm:text-left">
+					Aqui você pode criar a sua estampa pensada do zero.
+				</h3>
 
-          <AutoriaChat
-            text="Olá! Gostaria de uma caneca personalizada com a imagem dos meus
-                gatinhos, Meg e Django."
-          />
-        </HowItWorksCard>
-
-        <HowItWorksCard
-          className=""
-          step="second"
-          title="Definimos ou criamos sua estampa"
-        >
-          <AutoriaChat text="Bruna, aqui está sua estampa e um exemplo de como ela ficará em sua caneca. Espero que goste!" />
-
-          <AutoriaChat
-            text={
-              <img
-                className="h-[92px] pointer-events-none"
-                alt="Resultado da caneca solicitada"
-                src={mugResultImg}
-              />
-            }
-          />
-        </HowItWorksCard>
-
-        <HowItWorksCard
-          step="third"
-          title="Você aprova ou realizamos os ajustes solicitados"
-        >
-          <CustomerChat text="Eu adorei! Como prosseguimos?" />
-
-          <AutoriaChat text="Vamos iniciar a produção e te enviamos conforme o prazo informado." />
-        </HowItWorksCard>
-
-        <HowItWorksCard
-          step="fourth"
-          title="Produzimos e enviamos a sua caneca até você!"
-        >
-          <AutoriaChat text="Bruna, sua caneca está pronta! Você pode acompanhar o envio clicando no link: rastreio.com.br" />
-
-          <CustomerChat text="Ok, obrigada!" />
-        </HowItWorksCard>
-      </div>
-    </section>
-  )
+				<ul className="flex flex-col gap-4 mt-4">
+					<WorksItem
+						item="01"
+						description="Chame a gente no WhatsApp e conte a sua ideia."
+						title="Conte a sua ideia"
+					/>
+					<WorksItem
+						item="02"
+						description="Criamos a sua estampa com todo cuidado."
+						title="Sua estampa do seu jeito"
+					/>
+					<WorksItem
+						item="03"
+						description="Você aprova ou ajusta como quiser até ficar perfeito."
+						title="Aprove ou ajuste"
+					/>
+					<WorksItem
+						item="04"
+						description="Produzimos e enviamos a sua caneca até você! "
+						title="Enviamos até você!"
+					/>
+				</ul>
+			</div>
+		</section>
+	);
 }
