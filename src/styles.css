@@ -107,7 +107,7 @@ code {
   --primary-foreground: #ffffff;
   --secondary: #d89b4e;
   --secondary-foreground: #ffffff;
-  --muted: #f5f5f5;
+  --muted: #eeeeee;
   --muted-foreground: #737373;
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
