@@ -1,21 +1,21 @@
-import { HowItWorksSection } from './components/how-it-works-section'
-import { QuestionSection } from './components/questions-section'
-import { ProductsSection } from './components/products-section'
-import { HeroSection } from './components/hero-section'
-import { WhatsappButton } from './components/whatsapp-button'
+import { HeroSection } from "./components/hero-section";
+import { HowItWorksSection } from "./components/how-it-works-section";
+import { ProductsSection } from "./components/products-section";
+import { QuestionSection } from "./components/questions-section";
+import { WhatsappButton } from "./components/whatsapp-button";
 
 export function StorePage() {
-  return (
-    <>
-      <HeroSection />
+	return (
+		<>
+			<HeroSection />
 
-      <ProductsSection />
+			<ProductsSection />
 
-      <HowItWorksSection />
+			<HowItWorksSection />
 
-      <QuestionSection />
+			<QuestionSection />
 
-      <WhatsappButton />
-    </>
-  )
+			<WhatsappButton />
+		</>
+	);
 }
