@@ -41,6 +41,12 @@ export const Route = createFileRoute("/(public)/produtos/$productId")({
 			{ property: "og:image", content: productImageUrl },
 			{ property: "og:image:secure_url", content: productImageUrl },
 			{ property: "og:image:alt", content: loaderData?.name },
+			{ property: "og:image:width", content: "600" },
+			{ property: "og:image:height", content: "600" },
+			{ name: "twitter:card", content: "summary_large_image" },
+			{ name: "twitter:title", content: title },
+			{ name: "twitter:description", content: description },
+			{ name: "twitter:image", content: productImageUrl },
 		].filter((item) => typeof item.content !== "undefined" || "title" in item);
 
 		return {
