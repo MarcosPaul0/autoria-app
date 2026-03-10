@@ -25,8 +25,7 @@ export const Route = createFileRoute("/(public)/produtos/$productId")({
 		const description =
 			loaderData?.printDescription ??
 			"Conheça os produtos personalizados da Autoria Loja.";
-		const ogImage = loaderData?.productImages[0]?.imageUrl?.trim();
-		const ogSecureImage = ogImage?.startsWith("https://") ? ogImage : undefined;
+		const productImageUrl = loaderData?.productImages[0]?.imageUrl?.trim();
 		const productUrl =
 			siteUrl && loaderData?.id
 				? `${siteUrl}/produtos/${loaderData.id}`
@@ -39,13 +38,9 @@ export const Route = createFileRoute("/(public)/produtos/$productId")({
 			{ property: "og:description", content: description },
 			{ property: "og:type", content: "product" },
 			{ property: "og:url", content: productUrl },
-			{ property: "og:image", content: ogImage },
-			{ property: "og:image:secure_url", content: ogSecureImage },
+			{ property: "og:image", content: productImageUrl },
+			{ property: "og:image:secure_url", content: productImageUrl },
 			{ property: "og:image:alt", content: loaderData?.name },
-			{ name: "twitter:card", content: "summary_large_image" },
-			{ name: "twitter:title", content: title },
-			{ name: "twitter:description", content: description },
-			{ name: "twitter:image", content: ogImage },
 		].filter((item) => typeof item.content !== "undefined" || "title" in item);
 
 		return {
@@ -66,7 +61,7 @@ export const Route = createFileRoute("/(public)/produtos/$productId")({
 						"@type": "Product",
 						name: loaderData?.name,
 						description: loaderData?.printDescription,
-						image: ogImage,
+						image: productImageUrl,
 						url: productUrl,
 					}),
 				},
