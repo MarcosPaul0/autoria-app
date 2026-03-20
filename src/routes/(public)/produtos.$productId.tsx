@@ -20,11 +20,11 @@ export const Route = createFileRoute("/(public)/produtos/$productId")({
 	head: ({ loaderData }) => {
 		const siteUrl = import.meta.env.VITE_SITE_URL?.replace(/\/$/, "");
 		const title = loaderData?.name
-			? `${loaderData.name} | Autoria Loja`
-			: "Autoria Loja | Presentes e Personalizados";
+			? `${loaderData.name} - Autoria | Personalizados & Presentes`
+			: "Autoria | Personalizados & Presentes";
 		const description =
 			loaderData?.printDescription ??
-			"Conheça os produtos personalizados da Autoria Loja.";
+			"Conheça nossos produtos personalizados - Autoria | Personalizados & Presentes.";
 		const productImageUrl = loaderData?.productImages[0]?.imageUrl?.trim();
 		const productUrl =
 			siteUrl && loaderData?.id
@@ -41,7 +41,7 @@ export const Route = createFileRoute("/(public)/produtos/$productId")({
 			{ property: "og:image", content: productImageUrl },
 			{ property: "og:image:secure_url", content: productImageUrl },
 			{ property: "og:image:alt", content: loaderData?.name },
-			{ property: "og:image:width", content: "600" },
+			{ property: "og:image:width", content: "900" },
 			{ property: "og:image:height", content: "600" },
 			{ name: "twitter:card", content: "summary_large_image" },
 			{ name: "twitter:title", content: title },
