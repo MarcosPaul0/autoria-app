@@ -2,7 +2,7 @@ import footerLogoImg from "@autoria/assets/svgs/footer-logo.svg";
 import logo from "@autoria/assets/svgs/logo.svg";
 import { APP_ROUTE } from "@autoria/constants/app-route";
 import { LANDING_PAGE_SECTIONS } from "@autoria/constants/landing-page-sections";
-import { URL_WHATSAPP } from "@autoria/constants/urls";
+import { ULR_INSTAGRAM, URL_WHATSAPP } from "@autoria/constants/urls";
 import { createFileRoute, Link, Outlet } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/(public)")({
@@ -106,6 +106,13 @@ function PublicLayout() {
 							className="text-secondary-foreground text-base hover:underline"
 						>
 							Fale conosco pelo WhatsApp
+						</a>
+						<a
+							target="_blank"
+							href={ULR_INSTAGRAM}
+							className="text-secondary-foreground text-base hover:underline"
+						>
+							Siga nossa página no Instagram
 						</a>
 						<Link
 							to="/"
