@@ -1,3 +1,4 @@
+import { buildCanonicalUrl, buildPageHead, SITE_NAME } from "@autoria/libs/seo";
 import { ProductPage } from "@autoria/pages/products/product";
 import { ProductPresenter } from "@autoria/presenters/product-presenter";
 import { ProductRepository } from "@autoria/repositories/product-repository";
@@ -18,61 +19,81 @@ export const Route = createFileRoute("/(public)/produtos/$productId")({
 		});
 	},
 	head: ({ loaderData }) => {
-		const siteUrl = import.meta.env.VITE_SITE_URL?.replace(/\/$/, "");
-		const title = loaderData?.name
-			? `${loaderData.name} - Autoria | Personalizados & Presentes`
-			: "Autoria | Personalizados & Presentes";
+		const title = loaderData?.name ? `${loaderData.name} | Autoria` : SITE_NAME;
 		const description =
 			loaderData?.printDescription ??
-			"Conheça nossos produtos personalizados - Autoria | Personalizados & Presentes.";
+			"Conheca nossos produtos personalizados e presentes criativos da Autoria.";
 		const productImageUrl = loaderData?.productImages[0]?.imageUrl?.trim();
-		const productUrl =
-			siteUrl && loaderData?.id
-				? `${siteUrl}/produtos/${loaderData.id}`
-				: undefined;
+		const productImages = loaderData?.productImages
+			.map((item) => item.imageUrl?.trim())
+			.filter(Boolean);
+		const productPath = loaderData?.id
+			? `/produtos/${loaderData.id}`
+			: undefined;
+		const productUrl = productPath ? buildCanonicalUrl(productPath) : undefined;
+		const productPrice = loaderData
+			? Number(
+					(
+						(loaderData.priceInCents * (100 - loaderData.discountPercentage)) /
+						10000
+					).toFixed(2),
+				)
+			: undefined;
 
-		const meta = [
-			{ title },
-			{ name: "description", content: description },
-			{ property: "og:title", content: title },
-			{ property: "og:description", content: description },
-			{ property: "og:type", content: "product" },
-			{ property: "og:url", content: productUrl },
-			{ property: "og:image", content: productImageUrl },
-			{ property: "og:image:secure_url", content: productImageUrl },
-			{ property: "og:image:alt", content: loaderData?.name },
-			{ property: "og:image:width", content: "900" },
-			{ property: "og:image:height", content: "600" },
-			{ name: "twitter:card", content: "summary_large_image" },
-			{ name: "twitter:title", content: title },
-			{ name: "twitter:description", content: description },
-			{ name: "twitter:image", content: productImageUrl },
-		].filter((item) => typeof item.content !== "undefined" || "title" in item);
-
-		return {
-			meta,
-			links: productUrl
-				? [
-						{
-							rel: "canonical",
-							href: productUrl,
-						},
-					]
-				: [],
-			scripts: [
+		return buildPageHead({
+			title,
+			description,
+			path: productPath,
+			type: "product",
+			imageUrl: productImageUrl,
+			structuredData: [
 				{
-					type: "application/ld+json",
-					children: JSON.stringify({
-						"@context": "https://schema.org",
-						"@type": "Product",
-						name: loaderData?.name,
-						description: loaderData?.printDescription,
-						image: productImageUrl,
-						url: productUrl,
-					}),
+					"@context": "https://schema.org",
+					"@type": "BreadcrumbList",
+					itemListElement: [
+						{
+							"@type": "ListItem",
+							position: 1,
+							name: "Inicio",
+							item: buildCanonicalUrl("/"),
+						},
+						{
+							"@type": "ListItem",
+							position: 2,
+							name: loaderData?.name,
+							item: productUrl,
+						},
+					].filter((item) => item.item && item.name),
+				},
+				{
+					"@context": "https://schema.org",
+					"@type": "Product",
+					name: loaderData?.name,
+					description,
+					image: productImages,
+					category: loaderData?.category,
+					sku: loaderData?.id,
+					url: productUrl,
+					brand: {
+						"@type": "Brand",
+						name: "Autoria",
+					},
+					offers: productPrice
+						? {
+								"@type": "Offer",
+								priceCurrency: "BRL",
+								price: productPrice,
+								url: productUrl,
+								itemCondition: "https://schema.org/NewCondition",
+								seller: {
+									"@type": "Organization",
+									name: "Autoria",
+								},
+							}
+						: undefined,
 				},
 			],
-		};
+		});
 	},
 });
 

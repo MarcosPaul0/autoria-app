@@ -1,8 +1,9 @@
-/** biome-ignore-all lint/correctness/useUniqueElementIds: <explanation> */
+/** biome-ignore-all lint/correctness/useUniqueElementIds: accordion item ids are stable and scoped to this section */
 import { Accordion } from "@autoria/components/accordion";
 import { LinkButton } from "@autoria/components/link-button";
 import { LANDING_PAGE_SECTIONS } from "@autoria/constants/landing-page-sections";
 import { URL_WHATSAPP } from "@autoria/constants/urls";
+import { FAQ_ENTRIES } from "@autoria/libs/seo";
 import { WhatsappLogoIcon } from "@phosphor-icons/react/dist/ssr";
 import { Question } from "./question";
 
@@ -39,41 +40,14 @@ export function QuestionSection() {
 				defaultValue="item-1"
 				className="max-w-3xl"
 			>
-				<Question
-					id="item-1"
-					answer="Pode sim! Você conta sua ideia pelo WhatsApp e nós criamos uma estampa 100% original, do seu jeito."
-					question="Posso criar uma estampa totalmente do zero?"
-				/>
-
-				<Question
-					id="item-2"
-					question="Posso pedir ajustes na arte?"
-					answer="Antes da produção, você recebe a arte para aprovação e pode solicitar ajustes para que tudo fique exatamente como imaginou."
-				/>
-
-				<Question
-					id="item-3"
-					question="Como faço meu pedido?"
-					answer="Todo o atendimento é feito pelo WhatsApp da Autoria. É só chamar, contar sua ideia (ou escolher uma estampa pronta) e a gente cuida do resto."
-				/>
-
-				<Question
-					id="item-4"
-					question="Qual é o prazo de produção?"
-					answer="O prazo pode variar conforme o tipo de pedido (estampa pronta ou exclusiva). Após o primeiro contato no WhatsApp, informamos o prazo certinho antes de iniciar a produção."
-				/>
-
-				<Question
-					id="item-5"
-					question="Quais são as formas de pagamento?"
-					answer="Aceitamos PIX, cartão de crédito e outras opções que informamos no atendimento pelo WhatsApp."
-				/>
-
-				<Question
-					id="item-6"
-					question="Posso comprar para presentear?"
-					answer="Com certeza! As canecas da Autoria são pensadas exatamente para isso: presentear com significado. Se quiser, podemos orientar na escolha da estampa ideal."
-				/>
+				{FAQ_ENTRIES.map((item, index) => (
+					<Question
+						key={item.question}
+						id={`item-${index + 1}`}
+						question={item.question}
+						answer={item.answer}
+					/>
+				))}
 			</Accordion>
 
 			<LinkButton
