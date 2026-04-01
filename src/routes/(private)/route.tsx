@@ -1,6 +1,7 @@
 import logo from "@autoria/assets/svgs/logo.svg";
 import { Button } from "@autoria/components/button";
 import { APP_ROUTE } from "@autoria/constants/app-route";
+import { AUTH_TOKEN_COOKIE } from "@autoria/constants/config";
 import type { HttpStatus } from "@autoria/constants/http-status";
 import { HTTP_STATUS } from "@autoria/constants/http-status";
 import { buildPageHead } from "@autoria/libs/seo";
@@ -11,6 +12,7 @@ import {
 	createFileRoute,
 	Link,
 	Outlet,
+	redirect,
 	useNavigate,
 } from "@tanstack/react-router";
 
@@ -19,7 +21,29 @@ const LOGOUT_ERROR_MESSAGES = {
 	[HTTP_STATUS.internal]: "Erro ao sair! Tente novamente mais tarde.",
 } as Record<HttpStatus, string>;
 
+function hasTokenInCookies() {
+	if (typeof document === "undefined") {
+		return true;
+	}
+
+	if (!AUTH_TOKEN_COOKIE?.trim()) {
+		return false;
+	}
+
+	return document.cookie
+		.split(";")
+		.map((cookie) => cookie.trim())
+		.some((cookie) => cookie.startsWith(`${AUTH_TOKEN_COOKIE}=`));
+}
+
 export const Route = createFileRoute("/(private)")({
+	beforeLoad: () => {
+		if (!hasTokenInCookies()) {
+			throw redirect({
+				to: APP_ROUTE.public.login,
+			});
+		}
+	},
 	head: () =>
 		buildPageHead({
 			title: "Painel Administrativo | Autoria",
