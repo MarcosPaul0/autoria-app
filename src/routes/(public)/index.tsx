@@ -6,8 +6,8 @@ import {
 	FAQ_ENTRIES,
 } from "@autoria/libs/seo";
 import { StorePage } from "@autoria/pages/store";
-import { ProductCategoryPresenter } from "@autoria/presenters/product-category-presenter";
-import { ProductCategoryRepository } from "@autoria/repositories/product-category-repository";
+import { productCategoryToUiOptions } from "@autoria/presenters/product-category-presenter";
+import { listAllProductCategories } from "@autoria/repositories/product-category-repository";
 import { createFileRoute } from "@tanstack/react-router";
 
 export interface ProductSearch {
@@ -20,10 +20,9 @@ export const Route = createFileRoute("/(public)/")({
 		await context.queryClient.ensureQueryData({
 			queryKey: [QUERY_KEYS.productCategoryOptions],
 			queryFn: async () => {
-				const productCategoriesResponse =
-					await ProductCategoryRepository.listAll();
+				const productCategoriesResponse = await listAllProductCategories();
 
-				return ProductCategoryPresenter.optionsToUi(productCategoriesResponse);
+				return productCategoryToUiOptions(productCategoriesResponse);
 			},
 		});
 	},

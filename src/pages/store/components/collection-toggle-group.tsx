@@ -7,8 +7,8 @@ import {
 } from "@autoria/components/select";
 import { ToggleGroup, ToggleGroupItem } from "@autoria/components/toggle-group";
 import { QUERY_KEYS } from "@autoria/constants/query-keys";
-import { ProductCategoryPresenter } from "@autoria/presenters/product-category-presenter";
-import { ProductCategoryRepository } from "@autoria/repositories/product-category-repository";
+import { productCategoryToUiOptions } from "@autoria/presenters/product-category-presenter";
+import { listAllProductCategories } from "@autoria/repositories/product-category-repository";
 import { FunnelSimpleIcon } from "@phosphor-icons/react";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { useSearch } from "@tanstack/react-router";
@@ -23,10 +23,9 @@ export function CollectionToggleGroup({
 	const { data: productCategoryOptionsData } = useSuspenseQuery({
 		queryKey: [QUERY_KEYS.productCategoryOptions],
 		queryFn: async () => {
-			const productCategoriesResponse =
-				await ProductCategoryRepository.listAll();
+			const productCategoriesResponse = await listAllProductCategories();
 
-			return ProductCategoryPresenter.optionsToUi(productCategoriesResponse);
+			return productCategoryToUiOptions(productCategoriesResponse);
 		},
 	});
 

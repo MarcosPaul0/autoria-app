@@ -1,26 +1,45 @@
-import { API_ROUTES } from '@autoria/constants/api-routes'
-import { apiClient } from '@autoria/services/api-service'
+import { API_ROUTES } from "@autoria/constants/api-routes";
 import type {
-  Pagination,
-  ProductCategory,
-} from '@autoria/interfaces/api-responses.interface'
+	Pagination,
+	ProductCategory,
+	ProductCategoryForAdmin,
+} from "@autoria/interfaces/api-responses.interface";
+import { apiClient } from "@autoria/services/api-service";
 
-export class ProductCategoryRepository {
-  static async listAll() {
-    return await apiClient.get<Pagination<ProductCategory>>(
-      API_ROUTES.productCategory.findAll,
-    )
-  }
-
-  static async findById(productCategoryId: string) {
-    return await apiClient.get<ProductCategory>(
-      `${API_ROUTES.productCategory.findById}${productCategoryId}`,
-    )
-  }
-
-  static async delete(productCategoryId: string) {
-    await apiClient.delete(
-      `${API_ROUTES.productCategory.delete}${productCategoryId}`,
-    )
-  }
+async function listAllProductCategories() {
+	return await apiClient.get<Pagination<ProductCategory>>(
+		API_ROUTES.productCategory.findAll,
+	);
 }
+
+async function listAllProductCategoriesForAdmin() {
+	return await apiClient.get<Pagination<ProductCategoryForAdmin>>(
+		API_ROUTES.productCategory.findAllForAdmin,
+	);
+}
+
+async function findProductCategoryById(productCategoryId: string) {
+	return await apiClient.get<ProductCategory>(
+		`${API_ROUTES.productCategory.findById}${productCategoryId}`,
+	);
+}
+
+async function findProductCategoryByIdForAdmin(productCategoryId: string) {
+	return await apiClient.get<ProductCategoryForAdmin>(
+		`${API_ROUTES.productCategory.findByIdForAdmin}${productCategoryId}`,
+	);
+}
+
+async function deleteProductCategory(productCategoryId: string) {
+	await apiClient.delete(
+		`${API_ROUTES.productCategory.delete}${productCategoryId}`,
+	);
+}
+
+export {
+	listAllProductCategories,
+	listAllProductCategoriesForAdmin,
+	findProductCategoryByIdForAdmin,
+	findProductCategoryById,
+	deleteProductCategory,
+};
