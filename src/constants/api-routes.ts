@@ -2,6 +2,7 @@ export const API_ROUTES = {
 	auth: {
 		login: "/api/auth/login",
 		logout: "/api/auth/logout",
+		verify: "/api/auth/verify",
 	},
 	productCategory: {
 		create: "/api/product-category",

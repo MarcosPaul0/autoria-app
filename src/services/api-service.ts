@@ -1,4 +1,5 @@
 import { API_BASE_URL } from "@autoria/constants/config";
+import { HTTP_STATUS } from "@autoria/constants/http-status";
 import { ApiResponseError } from "@autoria/errors/api-response-error";
 
 interface RequestOptions extends RequestInit {
@@ -16,6 +17,16 @@ class ApiService {
 		this.baseUrl = baseUrl;
 	}
 
+	private async getServerSideCookieHeader() {
+		if (typeof window !== "undefined") {
+			return undefined;
+		}
+
+		const { getRequestHeader } = await import("@tanstack/react-start/server");
+
+		return getRequestHeader("cookie");
+	}
+
 	private async request<T>(
 		endpoint: string,
 		{ params, ...options }: RequestOptions,
@@ -25,13 +36,21 @@ class ApiService {
 		}
 
 		const isFormData = options.body instanceof FormData;
+		const cookieHeader = await this.getServerSideCookieHeader();
+		const headers = new Headers(
+			isFormData
+				? options.headers
+				: { ...this.headers, ...options.headers },
+		);
+
+		if (cookieHeader && !headers.has("cookie")) {
+			headers.set("cookie", cookieHeader);
+		}
 
 		const config: RequestInit = {
 			...options,
 			method: options.method || "GET",
-			headers: isFormData
-				? options.headers
-				: { ...this.headers, ...options.headers },
+			headers,
 			body: isFormData ? options.body : JSON.stringify(options.body),
 			credentials: "include",
 		};
@@ -42,7 +61,6 @@ class ApiService {
 			`${this.baseUrl}${endpoint}?${searchParams}`,
 			config,
 		);
-
 		if (!response.ok) {
 			const errorResponse = await response.json();
 
@@ -51,6 +69,10 @@ class ApiService {
 				errorResponse.statusCode,
 				endpoint,
 			);
+		}
+
+		if (response.status === HTTP_STATUS.noContent) {
+			return null as T;
 		}
 
 		const textResponse = await response.text();
