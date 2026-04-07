@@ -1,10 +1,19 @@
 import { API_BASE_URL } from "@autoria/constants/config";
 import { HTTP_STATUS } from "@autoria/constants/http-status";
 import { ApiResponseError } from "@autoria/errors/api-response-error";
+import { createIsomorphicFn } from "@tanstack/react-start";
 
 interface RequestOptions extends RequestInit {
 	params?: any;
 }
+
+const getServerSideCookieHeader = createIsomorphicFn()
+	.server(async () => {
+		const { getRequestHeader } = await import("@tanstack/react-start/server");
+
+		return getRequestHeader("cookie");
+	})
+	.client(() => undefined);
 
 class ApiService {
 	private baseUrl?: string;
@@ -17,16 +26,6 @@ class ApiService {
 		this.baseUrl = baseUrl;
 	}
 
-	private async getServerSideCookieHeader() {
-		if (typeof window !== "undefined") {
-			return undefined;
-		}
-
-		const { getRequestHeader } = await import("@tanstack/react-start/server");
-
-		return getRequestHeader("cookie");
-	}
-
 	private async request<T>(
 		endpoint: string,
 		{ params, ...options }: RequestOptions,
@@ -36,7 +35,7 @@ class ApiService {
 		}
 
 		const isFormData = options.body instanceof FormData;
-		const cookieHeader = await this.getServerSideCookieHeader();
+		const cookieHeader = await getServerSideCookieHeader();
 		const headers = new Headers(
 			isFormData
 				? options.headers
