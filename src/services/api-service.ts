@@ -2,15 +2,13 @@ import { API_BASE_URL } from "@autoria/constants/config";
 import { HTTP_STATUS } from "@autoria/constants/http-status";
 import { ApiResponseError } from "@autoria/errors/api-response-error";
 import { createIsomorphicFn } from "@tanstack/react-start";
-
+import { getRequestHeader } from "@tanstack/react-start/server";
 interface RequestOptions extends RequestInit {
 	params?: any;
 }
 
 const getServerSideCookieHeader = createIsomorphicFn()
 	.server(async () => {
-		const { getRequestHeader } = await import("@tanstack/react-start/server");
-
 		return getRequestHeader("cookie");
 	})
 	.client(() => undefined);
