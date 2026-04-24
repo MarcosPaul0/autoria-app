@@ -91,7 +91,7 @@ export function ShippingForm({ productId }: ShippingFormProps) {
 					<p className="text-lg font-bold line-he">
 						Frete para sua região:{" "}
 						<span>
-							{FormatterHelper.toReal(shippingData.shippingPriceInCents)}
+							{shippingData.shippingPriceInCents > 0 ? FormatterHelper.toReal(shippingData.shippingPriceInCents) : "FRETE GRÁTIS"}
 						</span>
 					</p>
 					<p>
