@@ -1,13 +1,13 @@
-import type { HttpStatus } from '@autoria/constants/http-status'
+import type { HttpStatus } from "@autoria/constants/http-status";
 
 export class ApiResponseError extends Error {
-  public statusCode: HttpStatus
-  public endpoint: string
+	public statusCode: HttpStatus;
+	public endpoint: string;
 
-  constructor(message: string, statusCode: HttpStatus, endpoint: string) {
-    super(message)
+	constructor(message: string, statusCode: HttpStatus, endpoint: string) {
+		super(message);
 
-    this.statusCode = statusCode
-    this.endpoint = endpoint
-  }
+		this.statusCode = statusCode;
+		this.endpoint = endpoint;
+	}
 }

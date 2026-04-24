@@ -35,9 +35,7 @@ class ApiService {
 		const isFormData = options.body instanceof FormData;
 		const cookieHeader = await getServerSideCookieHeader();
 		const headers = new Headers(
-			isFormData
-				? options.headers
-				: { ...this.headers, ...options.headers },
+			isFormData ? options.headers : { ...this.headers, ...options.headers },
 		);
 
 		if (cookieHeader && !headers.has("cookie")) {

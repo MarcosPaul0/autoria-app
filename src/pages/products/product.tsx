@@ -11,6 +11,7 @@ import { useState } from "react";
 import type { Components } from "react-markdown";
 import ReactMarkdown from "react-markdown";
 import { WhatsappProductLink } from "./components/whatsapp-product-link";
+import { ShippingForm } from "./components/shipping-form";
 
 interface ProductPageProps {
 	productId: string;
@@ -142,6 +143,8 @@ export function ProductPage({ productId }: ProductPageProps) {
 					</div>
 
 					<WhatsappProductLink productName={productData.name} />
+
+					<ShippingForm productId={productId} />
 				</div>
 			</div>
 

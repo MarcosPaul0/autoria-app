@@ -85,3 +85,30 @@ export class ProductRepository {
 		await apiClient.delete(`${API_ROUTES.product.delete}${productId}`);
 	}
 }
+
+interface CalculateProductShippingParams {
+	productId: string;
+	postalCode: string;
+}
+
+export interface CalculateProductShippingResponse {
+	shippingPriceInCents: number;
+	estimationDeliveryDate: string;
+}
+
+async function calculateProductShipping({
+	postalCode,
+	productId,
+}: CalculateProductShippingParams) {
+	var shippingResponse = await apiClient.post<CalculateProductShippingResponse>(
+		API_ROUTES.product.calculateShipping,
+		{
+			productId,
+			destinationPostalCode: postalCode,
+		},
+	);
+
+	return shippingResponse;
+}
+
+export { calculateProductShipping };

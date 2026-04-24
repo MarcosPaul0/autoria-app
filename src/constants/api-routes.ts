@@ -22,6 +22,7 @@ export const API_ROUTES = {
 		findAll: "/api/product/list",
 		findByIdForAdmin: "/api/product/for-admin/",
 		findAllForAdmin: "/api/product/list/for-admin",
+		calculateShipping: "/api/shipping",
 	},
 	user: {
 		findById: "/api/user/",

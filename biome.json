@@ -31,7 +31,7 @@
 		"enabled": true,
 		"rules": {
 			"recommended": true,
-			"react": {
+			"correctness": {
 				"noChildrenProp": "off"
 			}
 		}

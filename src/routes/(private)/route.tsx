@@ -4,7 +4,10 @@ import { APP_ROUTE } from "@autoria/constants/app-route";
 import type { HttpStatus } from "@autoria/constants/http-status";
 import { HTTP_STATUS } from "@autoria/constants/http-status";
 import { buildPageHead } from "@autoria/libs/seo";
-import { logout, verifyAuthentication } from "@autoria/repositories/auth-repository";
+import {
+	logout,
+	verifyAuthentication,
+} from "@autoria/repositories/auth-repository";
 import { errorHandler } from "@autoria/utils/errorHandler";
 import { SignOutIcon } from "@phosphor-icons/react";
 import {
