@@ -52,7 +52,7 @@ export function ProductCard({ product }: ProductCardProps) {
 						className={`
               h-[160px] sm:h-[360px] rounded-lg object-cover bg-product-image
             `}
-						alt="logo"
+						alt={product.name}
 					/>
 
 					<CardTitle className="mx-auto my-0 text-sm sm:text-base text-center">

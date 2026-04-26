@@ -1,6 +1,6 @@
+import diaDasMaes from "@autoria/assets/images/dias-das-maes.png";
 import feNoDiaADia from "@autoria/assets/images/fe-no-dia-a-dia.png";
 import memoriasDeMinas from "@autoria/assets/images/memorias-de-minas.png";
-import petLovers from "@autoria/assets/images/pet-lovers.png";
 import {
 	Carousel,
 	CarouselContent,
@@ -27,11 +27,11 @@ export function HeroSection() {
 				}}
 			>
 				<CarouselContent>
-					<CarouselItem key="memorias-de-minas">
+					<CarouselItem key="dia-das-maes">
 						<img
-							src={memoriasDeMinas}
+							src={diaDasMaes}
 							className="aspect-[3.2] pointer-events-none"
-							alt="logo"
+							alt="Coleção de dia das mães"
 						/>
 					</CarouselItem>
 
@@ -39,17 +39,17 @@ export function HeroSection() {
 						<img
 							src={feNoDiaADia}
 							className="aspect-[3.2] pointer-events-none"
-							alt="store"
+							alt="Coleção fé no dia a dia"
 						/>
 					</CarouselItem>
-
+					{/* 
 					<CarouselItem key="pet-lovers">
 						<img
 							src={petLovers}
 							className="aspect-[3.2] pointer-events-none"
 							alt="logo"
 						/>
-					</CarouselItem>
+					</CarouselItem> */}
 				</CarouselContent>
 			</Carousel>
 		</section>
