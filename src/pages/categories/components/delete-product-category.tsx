@@ -13,7 +13,7 @@ import { HTTP_STATUS } from "@autoria/constants/http-status";
 import { QUERY_KEYS } from "@autoria/constants/query-keys";
 import type { QueryProductCategories } from "@autoria/interfaces/query-data.interface";
 import { cn } from "@autoria/libs/cn";
-import { deleteProductCategory } from "@autoria/repositories/product-category-repository";
+import { deleteProductCategory } from "@autoria/repositories/product-category/json-product-category-repository";
 import { ToastService } from "@autoria/services/toast-service";
 import { errorHandler } from "@autoria/utils/errorHandler";
 import { TrashIcon } from "@phosphor-icons/react";

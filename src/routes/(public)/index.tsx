@@ -7,7 +7,7 @@ import {
 } from "@autoria/libs/seo";
 import { StorePage } from "@autoria/pages/store";
 import { productCategoryToUiOptions } from "@autoria/presenters/product-category-presenter";
-import { listAllProductCategories } from "@autoria/repositories/product-category-repository";
+import { listAllProductCategories } from "@autoria/repositories/product-category/json-product-category-repository";
 import { createFileRoute } from "@tanstack/react-router";
 
 export interface ProductSearch {

@@ -1,7 +1,7 @@
 import { QUERY_KEYS } from "@autoria/constants/query-keys";
 import { RegisterProductPage } from "@autoria/pages/products/register";
 import { productCategoryToUiOptions } from "@autoria/presenters/product-category-presenter";
-import { listAllProductCategoriesForAdmin } from "@autoria/repositories/product-category-repository";
+import { listAllProductCategoriesForAdmin } from "@autoria/repositories/product-category/json-product-category-repository";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/(private)/produtos/registrar")({

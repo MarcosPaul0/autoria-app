@@ -8,18 +8,18 @@ import {
 	DialogTitle,
 	DialogTrigger,
 } from "@autoria/components/dialog";
+import type { HttpStatus } from "@autoria/constants/http-status";
 import { HTTP_STATUS } from "@autoria/constants/http-status";
 import { QUERY_KEYS } from "@autoria/constants/query-keys";
+import { PaginationHelper } from "@autoria/helpers/pagination-helper";
+import type { QueryProducts } from "@autoria/interfaces/query-data.interface";
 import { cn } from "@autoria/libs/cn";
-import { ProductRepository } from "@autoria/repositories/product-repository";
+import { ProductRepository } from "@autoria/repositories/product/json-product-repository";
 import { ToastService } from "@autoria/services/toast-service";
 import { errorHandler } from "@autoria/utils/errorHandler";
 import { TrashIcon } from "@phosphor-icons/react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useSearch } from "@tanstack/react-router";
-import { PaginationHelper } from "@autoria/helpers/pagination-helper";
-import type { HttpStatus } from "@autoria/constants/http-status";
-import type { QueryProducts } from "@autoria/interfaces/query-data.interface";
 
 const DELETE_PRODUCT_ERROR = {
 	[HTTP_STATUS.badRequest]:

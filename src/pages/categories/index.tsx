@@ -10,7 +10,7 @@ import { Toolbar } from "@autoria/components/toolbar";
 import { APP_ROUTE } from "@autoria/constants/app-route";
 import { QUERY_KEYS } from "@autoria/constants/query-keys";
 import { productCategoryForAdminListToUi } from "@autoria/presenters/product-category-presenter";
-import { listAllProductCategoriesForAdmin } from "@autoria/repositories/product-category-repository";
+import { listAllProductCategoriesForAdmin } from "@autoria/repositories/product-category/json-product-category-repository";
 import { PlusIcon } from "@phosphor-icons/react";
 import { useQuery } from "@tanstack/react-query";
 import { ProductCategoryItem } from "./components/product-category-item";

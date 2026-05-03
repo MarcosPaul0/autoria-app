@@ -1,5 +1,5 @@
 import { UpdateCategoryPage } from "@autoria/pages/categories/update";
-import { findProductCategoryByIdForAdmin } from "@autoria/repositories/product-category-repository";
+import { findProductCategoryByIdForAdmin } from "@autoria/repositories/product-category/json-product-category-repository";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute(

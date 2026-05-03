@@ -5,7 +5,7 @@ import { QUERY_KEYS } from "@autoria/constants/query-keys";
 import { FormatterHelper } from "@autoria/helpers/formatter-helper";
 import { PaginationHelper } from "@autoria/helpers/pagination-helper";
 import { ProductCardSkeleton } from "@autoria/pages/products/components/product-card-skeleton";
-import { ProductRepository } from "@autoria/repositories/product-repository";
+import { ProductRepository } from "@autoria/repositories/product/json-product-repository";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { useNavigate, useSearch } from "@tanstack/react-router";
 import { ProductCard } from "../../products/components/product-card";

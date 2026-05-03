@@ -1,7 +1,7 @@
 import { buildCanonicalUrl, buildPageHead, SITE_NAME } from "@autoria/libs/seo";
 import { ProductPage } from "@autoria/pages/products/product";
 import { ProductPresenter } from "@autoria/presenters/product-presenter";
-import { ProductRepository } from "@autoria/repositories/product-repository";
+import { ProductRepository } from "@autoria/repositories/product/json-product-repository";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/(public)/produtos/$productId")({

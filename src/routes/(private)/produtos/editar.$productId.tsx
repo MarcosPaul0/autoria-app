@@ -1,8 +1,8 @@
 import { QUERY_KEYS } from "@autoria/constants/query-keys";
 import { UpdateProductPage } from "@autoria/pages/products/update";
 import { productCategoryToUiOptions } from "@autoria/presenters/product-category-presenter";
-import { listAllProductCategoriesForAdmin } from "@autoria/repositories/product-category-repository";
-import { ProductRepository } from "@autoria/repositories/product-repository";
+import { ProductRepository } from "@autoria/repositories/product/json-product-repository";
+import { listAllProductCategoriesForAdmin } from "@autoria/repositories/product-category/json-product-category-repository";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/(private)/produtos/editar/$productId")({

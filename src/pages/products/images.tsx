@@ -12,7 +12,7 @@ import type { HttpStatus } from "@autoria/constants/http-status";
 import { HTTP_STATUS } from "@autoria/constants/http-status";
 import type { ProductImage } from "@autoria/interfaces/api-responses.interface";
 import { ProductImageCard } from "@autoria/pages/products/components/product-image-card";
-import { ProductRepository } from "@autoria/repositories/product-repository";
+import { ProductRepository } from "@autoria/repositories/product/json-product-repository";
 import { ToastService } from "@autoria/services/toast-service";
 import { errorHandler } from "@autoria/utils/errorHandler";
 import { CloudArrowUpIcon } from "@phosphor-icons/react";

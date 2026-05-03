@@ -14,7 +14,7 @@ import { FormatterHelper } from "@autoria/helpers/formatter-helper";
 import { PaginationHelper } from "@autoria/helpers/pagination-helper";
 import { ProductItem } from "@autoria/pages/products/components/product-item";
 import { CollectionToggleGroup } from "@autoria/pages/store/components/collection-toggle-group";
-import { ProductRepository } from "@autoria/repositories/product-repository";
+import { ProductRepository } from "@autoria/repositories/product/json-product-repository";
 import { PlusIcon } from "@phosphor-icons/react";
 import { useQuery } from "@tanstack/react-query";
 import { useNavigate, useSearch } from "@tanstack/react-router";

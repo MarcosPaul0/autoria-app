@@ -14,7 +14,7 @@ import type { HttpStatus } from "@autoria/constants/http-status";
 import { HTTP_STATUS } from "@autoria/constants/http-status";
 import { QUERY_KEYS } from "@autoria/constants/query-keys";
 import { FormatterHelper } from "@autoria/helpers/formatter-helper";
-import { findProductCategoryByIdForAdmin } from "@autoria/repositories/product-category-repository";
+import { findProductCategoryByIdForAdmin } from "@autoria/repositories/product-category/json-product-category-repository";
 import { apiClient } from "@autoria/services/api-service";
 import { ToastService } from "@autoria/services/toast-service";
 import { errorHandler } from "@autoria/utils/errorHandler";

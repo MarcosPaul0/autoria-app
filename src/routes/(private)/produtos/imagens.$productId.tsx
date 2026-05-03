@@ -1,6 +1,6 @@
 import { QUERY_KEYS } from "@autoria/constants/query-keys";
 import { ProductImagesPage } from "@autoria/pages/products/images";
-import { ProductRepository } from "@autoria/repositories/product-repository";
+import { ProductRepository } from "@autoria/repositories/product/json-product-repository";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/(private)/produtos/imagens/$productId")({

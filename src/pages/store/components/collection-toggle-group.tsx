@@ -8,7 +8,7 @@ import {
 import { ToggleGroup, ToggleGroupItem } from "@autoria/components/toggle-group";
 import { QUERY_KEYS } from "@autoria/constants/query-keys";
 import { productCategoryToUiOptions } from "@autoria/presenters/product-category-presenter";
-import { listAllProductCategories } from "@autoria/repositories/product-category-repository";
+import { listAllProductCategories } from "@autoria/repositories/product-category/json-product-category-repository";
 import { FunnelSimpleIcon } from "@phosphor-icons/react";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { useSearch } from "@tanstack/react-router";

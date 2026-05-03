@@ -1,0 +1,130 @@
+import { API_ROUTES } from "@autoria/constants/api-routes";
+import { ITEMS_PER_PAGE } from "@autoria/constants/config";
+import type {
+	Pagination,
+	Product,
+	ProductForAdmin,
+	ProductItem,
+} from "@autoria/interfaces/api-responses.interface";
+import { apiClient } from "@autoria/services/api-service";
+
+async function findProductByIdForAdmin(productId: string) {
+	return await apiClient.get<ProductForAdmin>(
+		`${API_ROUTES.product.findByIdForAdmin}${productId}`,
+	);
+}
+
+async function findProductById(productId: string) {
+	return await apiClient.get<Product>(
+		`${API_ROUTES.product.findById}${productId}`,
+	);
+}
+
+interface SetProductImagePayloadItem {
+	productImageId?: string;
+	displayOrder: number;
+	file?: File;
+}
+
+async function setProductImages(
+	productId: string,
+	images: Array<SetProductImagePayloadItem>,
+) {
+	const formData = new FormData();
+
+	images.forEach((item, index) => {
+		if (item.productImageId) {
+			formData.append(`images[${index}].Id`, item.productImageId);
+		}
+
+		if (item.file) {
+			formData.append(`images[${index}].File`, item.file);
+		}
+
+		formData.append(
+			`images[${index}].DisplayOrder`,
+			item.displayOrder.toString(),
+		);
+	});
+
+	return await apiClient.patch<void>(
+		`${API_ROUTES.product.setImages}${productId}`,
+		formData,
+	);
+}
+
+interface ListProductsParams {
+	page?: number;
+	productCategoryId?: string;
+}
+
+async function listProducts(params: ListProductsParams) {
+	return await apiClient.post<Pagination<ProductItem>>(
+		API_ROUTES.product.findAll,
+		{
+			page: params.page,
+			productCategoryId: params.productCategoryId,
+			itemsPerPage: ITEMS_PER_PAGE,
+		},
+	);
+}
+
+async function listProductsForAdmin(params: ListProductsParams) {
+	return await apiClient.post<Pagination<ProductForAdmin>>(
+		API_ROUTES.product.findAllForAdmin,
+		{
+			page: params.page,
+			productCategoryId: params.productCategoryId,
+			itemsPerPage: ITEMS_PER_PAGE,
+		},
+	);
+}
+
+async function deleteProduct(productId: string) {
+	await apiClient.delete(`${API_ROUTES.product.delete}${productId}`);
+}
+
+interface CalculateProductShippingParams {
+	productId: string;
+	postalCode: string;
+}
+
+export interface CalculateProductShippingResponse {
+	shippingPriceInCents: number;
+	estimationDeliveryDate: string;
+}
+
+async function calculateProductShipping({
+	postalCode,
+	productId,
+}: CalculateProductShippingParams) {
+	var shippingResponse = await apiClient.post<CalculateProductShippingResponse>(
+		API_ROUTES.product.calculateShipping,
+		{
+			productId,
+			destinationPostalCode: postalCode,
+		},
+	);
+
+	return shippingResponse;
+}
+
+export {
+	findProductByIdForAdmin,
+	findProductById,
+	setProductImages,
+	listProducts,
+	listProductsForAdmin,
+	deleteProduct,
+	calculateProductShipping,
+};
+
+export const ProductRepository = {
+	findById: findProductById,
+	findByIdForAdmin: findProductByIdForAdmin,
+	listProducts,
+	listProductsForAdmin,
+	setImages: setProductImages,
+	deleteProduct,
+	calculateProductShipping,
+};

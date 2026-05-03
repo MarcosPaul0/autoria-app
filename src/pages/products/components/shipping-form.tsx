@@ -3,13 +3,13 @@ import { FormNumericInput } from "@autoria/components/form-numeric-input";
 import { HTTP_STATUS, type HttpStatus } from "@autoria/constants/http-status";
 import { FormatterHelper } from "@autoria/helpers/formatter-helper";
 import {
-	calculateProductShipping,
 	type CalculateProductShippingResponse,
-} from "@autoria/repositories/product-repository";
+	calculateProductShipping,
+} from "@autoria/repositories/product/json-product-repository";
 import { errorHandler } from "@autoria/utils/errorHandler";
 import { TruckIcon } from "@phosphor-icons/react";
 import { useForm, useStore } from "@tanstack/react-form";
-import { useState, type SubmitEvent } from "react";
+import { type SubmitEvent, useState } from "react";
 import z from "zod";
 
 const calculateShippingFormSchema = z.object({
@@ -21,8 +21,7 @@ const calculateShippingFormSchema = z.object({
 });
 
 const CALCULATE_SHIPPING_ERROR_MESSAGES = {
-  [HTTP_STATUS.notFound]:
-		"Frete indisponível para esse CEP!",
+	[HTTP_STATUS.notFound]: "Frete indisponível para esse CEP!",
 	[HTTP_STATUS.unauthorized]:
 		"Ocorreu um erro ao calcular o frete. Tente novamente mais tarde!",
 	[HTTP_STATUS.badRequest]:
@@ -91,7 +90,9 @@ export function ShippingForm({ productId }: ShippingFormProps) {
 					<p className="text-lg font-bold line-he">
 						Frete para sua região:{" "}
 						<span>
-							{shippingData.shippingPriceInCents > 0 ? FormatterHelper.toReal(shippingData.shippingPriceInCents) : "FRETE GRÁTIS"}
+							{shippingData.shippingPriceInCents > 0
+								? FormatterHelper.toReal(shippingData.shippingPriceInCents)
+								: "FRETE GRÁTIS"}
 						</span>
 					</p>
 					<p>

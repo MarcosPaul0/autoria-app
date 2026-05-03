@@ -1,0 +1,325 @@
+{
+	"items": [
+    {
+			"id": "019d2bdc-af62-7384-af77-e881e25612b6",
+			"name": "Boas amigas não só conhecem nossas histórias",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019d2bdb-4c89-77c0-bc8a-d4285ba63870",
+			"category": "Frases com carinho",
+			"productImage": {
+				"id": "019d2bdc-fc8f-7aef-bad0-ff6181962a9f",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019d2bdc-af62-7384-af77-e881e25612b6/bdc125f0-7ae3-45b9-a6e6-d65a1c8f29da.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-26T20:36:35.647709Z",
+				"updatedAt": null
+			}
+		},
+		{
+			"id": "019d2bdf-b422-73ad-852f-ed4a112a6fb7",
+			"name": "Tem gente que muda o mundo",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019d2bdb-4c89-77c0-bc8a-d4285ba63870",
+			"category": "Frases com carinho",
+			"productImage": {
+				"id": "019d2bdf-ff85-7300-85ef-7ce0ce28ecce",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019d2bdf-b422-73ad-852f-ed4a112a6fb7/3090da94-e42b-4359-94a1-b886f2e3e1c3.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-26T20:39:53.162573Z",
+				"updatedAt": null
+			}
+		},
+		{
+			"id": "019cb175-cf09-7151-a67f-ce14f4432ed0",
+			"name": "Acaso não sabeis",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-43b3-7c7d-af53-5323918e7c5a",
+			"category": "Fé no dia a dia",
+			"productImage": {
+				"id": "019cb18f-7082-7697-8fda-04dcfc9d63f2",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019cb175-cf09-7151-a67f-ce14f4432ed0/019cb18f-7082-7697-8fda-04dcfc9d63f2.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-03T02:38:11.928773Z",
+				"updatedAt": null
+			}
+		},
+		{
+			"id": "019cb3bb-c59e-7acd-8a6e-41c6db612c5f",
+			"name": "Santa Teresinha",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-43b3-7c7d-af53-5323918e7c5a",
+			"category": "Fé no dia a dia",
+			"productImage": {
+				"id": "019cb3bc-1e9e-7fcf-ac36-5568caeb5abf",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019cb3bb-c59e-7acd-8a6e-41c6db612c5f/019cb3bc-1e9e-7fcf-ac36-5568caeb5abf.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-03T12:46:14.96098Z",
+				"updatedAt": null
+			}
+		},
+		{
+			"id": "019cb455-c884-7353-ba3a-0e17d3658ecf",
+			"name": "Eis-me aqui Senhor",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-43b3-7c7d-af53-5323918e7c5a",
+			"category": "Fé no dia a dia",
+			"productImage": {
+				"id": "019cb456-1824-73e8-9a99-630d13806b58",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019cb455-c884-7353-ba3a-0e17d3658ecf/019cb456-1824-73e8-9a99-630d13806b58.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-03T15:34:26.074715Z",
+				"updatedAt": null
+			}
+		},
+		{
+			"id": "019cb49f-0753-7176-ac1e-a41e64067867",
+			"name": "Eis-me aqui Senhor (horizontal)",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-43b3-7c7d-af53-5323918e7c5a",
+			"category": "Fé no dia a dia",
+			"productImage": {
+				"id": "019cb49f-6d58-727f-82d9-8e1a6b54d91b",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019cb49f-0753-7176-ac1e-a41e64067867/019cb49f-6d58-727f-82d9-8e1a6b54d91b.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-03T16:54:31.844724Z",
+				"updatedAt": null
+			}
+		},
+		{
+			"id": "019cb4a7-40e5-78c2-9da0-b453922e013f",
+			"name": "Eu me consagro a ti mãe de Deus e minha",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-43b3-7c7d-af53-5323918e7c5a",
+			"category": "Fé no dia a dia",
+			"productImage": {
+				"id": "019cb4a7-774b-7895-a737-842edc4c078c",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019cb4a7-40e5-78c2-9da0-b453922e013f/019cb4a7-774b-7895-a737-842edc4c078c.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-03T17:03:19.349217Z",
+				"updatedAt": null
+			}
+		},
+		{
+			"id": "019cb4c1-43a9-729f-91aa-80e635e41202",
+			"name": "Eu sou o caminho, a verdade e a vida",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-43b3-7c7d-af53-5323918e7c5a",
+			"category": "Fé no dia a dia",
+			"productImage": {
+				"id": "019cb4c1-a300-790f-a752-8f2275d44028",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019cb4c1-43a9-729f-91aa-80e635e41202/019cb4c1-a300-790f-a752-8f2275d44028.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-03T17:31:54.516076Z",
+				"updatedAt": null
+			}
+		},
+		{
+			"id": "019cb4c3-d45c-74cb-8475-e24559846be5",
+			"name": "Ó Maria concebida sem pecado",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-43b3-7c7d-af53-5323918e7c5a",
+			"category": "Fé no dia a dia",
+			"productImage": {
+				"id": "019cb4c4-3c54-7202-95ef-81639bba0ea0",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019cb4c3-d45c-74cb-8475-e24559846be5/019cb4c4-3c54-7202-95ef-81639bba0ea0.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-03T17:34:44.942606Z",
+				"updatedAt": null
+			}
+		},
+		{
+			"id": "019cb4c5-84be-7eec-9c35-665dcba22c0d",
+			"name": "Oração da Sagrada Família de Nazaré",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-43b3-7c7d-af53-5323918e7c5a",
+			"category": "Fé no dia a dia",
+			"productImage": {
+				"id": "019cb4c5-cf90-763c-bff4-5f19db24d2f7",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019cb4c5-84be-7eec-9c35-665dcba22c0d/019cb4c5-cf90-763c-bff4-5f19db24d2f7.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-03T17:36:28.20658Z",
+				"updatedAt": null
+			}
+		},
+		{
+			"id": "019cb4c7-93c5-763c-ae35-8ea68599c689",
+			"name": "Sagrada Família de Nazaré, minha família vossa é",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-43b3-7c7d-af53-5323918e7c5a",
+			"category": "Fé no dia a dia",
+			"productImage": {
+				"id": "019cb4c7-ee93-7f7a-bcce-70c7d3dcd065",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019cb4c7-93c5-763c-ae35-8ea68599c689/019cb4c7-ee93-7f7a-bcce-70c7d3dcd065.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-03T17:38:46.969386Z",
+				"updatedAt": null
+			}
+		},
+		{
+			"id": "019cb4cc-6614-7d47-b4c4-cc19daa750a7",
+			"name": "Medalha Milagrosa de Santa Catarina Labouré",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-43b3-7c7d-af53-5323918e7c5a",
+			"category": "Fé no dia a dia",
+			"productImage": {
+				"id": "019cb4cc-bb1f-7dfe-a0cb-7a82c750b6f2",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019cb4cc-6614-7d47-b4c4-cc19daa750a7/019cb4cc-bb1f-7dfe-a0cb-7a82c750b6f2.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-03T17:44:01.595838Z",
+				"updatedAt": null
+			}
+		},
+		{
+			"id": "019d2b84-4e0f-7f60-92a3-10181d5e9114",
+			"name": "Nossa Senhora da Conceição",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-43b3-7c7d-af53-5323918e7c5a",
+			"category": "Fé no dia a dia",
+			"productImage": {
+				"id": "019d2b84-88fe-740b-8595-d3bc0012b122",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019d2b84-4e0f-7f60-92a3-10181d5e9114/cdd7bf08-9dc2-4b26-8852-013b5b7ef21f.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-26T18:59:58.799575Z",
+				"updatedAt": null
+			}
+		},
+		{
+			"id": "019d2b85-4085-7fa4-afb8-e2dd98c6c686",
+			"name": "São Carlo Acutis - Eucaristia",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-43b3-7c7d-af53-5323918e7c5a",
+			"category": "Fé no dia a dia",
+			"productImage": {
+				"id": "019d2b85-7b03-7dd5-9b1a-c02993310736",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019d2b85-4085-7fa4-afb8-e2dd98c6c686/a5ee44bb-2ef5-4663-ae38-740cb15e9e5c.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-26T19:01:01.025866Z",
+				"updatedAt": null
+			}
+		},
+		{
+			"id": "019d2b86-30f4-76e3-9ce5-20cb4e489625",
+			"name": "São Carlo Acutis - Não eu, mas Deus",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-43b3-7c7d-af53-5323918e7c5a",
+			"category": "Fé no dia a dia",
+			"productImage": {
+				"id": "019d2b86-66b6-7783-b335-1d90ea438ccc",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019d2b86-30f4-76e3-9ce5-20cb4e489625/832b86e4-0c5f-4688-b00e-d574eb1d7463.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-26T19:02:01.331305Z",
+				"updatedAt": null
+			}
+		},
+		{
+			"id": "019d2b87-3344-7f0d-96af-090c678f1cd7",
+			"name": "Valei-me São José!",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-43b3-7c7d-af53-5323918e7c5a",
+			"category": "Fé no dia a dia",
+			"productImage": {
+				"id": "019d2b87-72c5-753f-a8af-6baf874e97bc",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019d2b87-3344-7f0d-96af-090c678f1cd7/612574e9-6557-40d6-ba3e-b48eab3bee7b.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-26T19:03:10.019576Z",
+				"updatedAt": null
+			}
+		},
+    {
+			"id": "019cb4f5-7e5b-7ada-8964-6e8b75251f7b",
+			"name": "Tudo que mãe toca, vira amor",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-a2fc-76f6-9bf2-0d82fabf9a0b",
+			"category": "Dia das mães",
+			"productImage": {
+				"id": "019cb4f7-6e9b-70e7-97a1-cad6ea5c4449",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019cb4f5-7e5b-7ada-8964-6e8b75251f7b/019cb4f7-6e9b-70e7-97a1-cad6ea5c4449.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-03T18:30:40.048461Z",
+				"updatedAt": null
+			}
+		},
+		{
+			"id": "019cb4f6-5785-7a2d-a75f-257ad9d600e1",
+			"name": "Mãe, você é o lugar onde mora o amor",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-a2fc-76f6-9bf2-0d82fabf9a0b",
+			"category": "Dia das mães",
+			"productImage": {
+				"id": "019cb4f8-5de4-7fed-ba2c-85d116a9f34a",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019cb4f6-5785-7a2d-a75f-257ad9d600e1/019cb4f8-5de4-7fed-ba2c-85d116a9f34a.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-03T18:31:41.526055Z",
+				"updatedAt": null
+			}
+		},
+		{
+			"id": "019cb4f6-f652-7535-9f45-a66609ee5cd5",
+			"name": "Para uso exclusivo da melhor mãe do mundo (verde)",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-a2fc-76f6-9bf2-0d82fabf9a0b",
+			"category": "Dia das mães",
+			"productImage": {
+				"id": "019cb508-bbe6-70da-a560-2f5eeb02d3f4",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019cb4f6-f652-7535-9f45-a66609ee5cd5/019cb508-bbe6-70da-a560-2f5eeb02d3f4.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-03T18:49:33.962521Z",
+				"updatedAt": null
+			}
+		},
+		{
+			"id": "019cb4fb-5c3f-7584-a5e8-8b654b126fe3",
+			"name": "\tPara uso exclusivo da melhor mãe do mundo (rosa)",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-a2fc-76f6-9bf2-0d82fabf9a0b",
+			"category": "Dia das mães",
+			"productImage": {
+				"id": "019cb509-3e00-7c9f-bb92-6b33453ae76e",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019cb4fb-5c3f-7584-a5e8-8b654b126fe3/019cb509-3e00-7c9f-bb92-6b33453ae76e.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-03T18:50:07.4797Z",
+				"updatedAt": null
+			}
+		},
+		{
+			"id": "019cb4fb-c1f2-7940-94c9-85acb6ac2355",
+			"name": "Para uso exclusivo da melhor mãe do mundo (laranja)",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-a2fc-76f6-9bf2-0d82fabf9a0b",
+			"category": "Dia das mães",
+			"productImage": {
+				"id": "019cb509-a6c2-72cc-a8a9-b6d741065833",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019cb4fb-c1f2-7940-94c9-85acb6ac2355/019cb509-a6c2-72cc-a8a9-b6d741065833.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-03T18:50:34.232146Z",
+				"updatedAt": null
+			}
+		}
+	],
+  "totalPages": 1,
+	"totalItems": 21,
+	"itemsPerPage": 100,
+	"page": 1,
+	"hasPrevious": false,
+	"hasNext": false
+}
