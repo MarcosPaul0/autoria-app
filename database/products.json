@@ -314,6 +314,126 @@
 				"createdAt": "2026-03-03T18:50:34.232146Z",
 				"updatedAt": null
 			}
+		},
+		{
+			"id": "019cb4e8-b673-7d3b-94e3-e86c24c04ed2",
+			"name": "Siga seus sonhos",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-7c84-7d37-b341-889e6aed26cb",
+			"category": "Pet Lovers",
+			"productImage": {
+				"id": "019cb4ed-f4d5-768f-8353-765e171b2255",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019cb4e8-b673-7d3b-94e3-e86c24c04ed2/019cb4ed-f4d5-768f-8353-765e171b2255.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-03T18:20:19.271209Z",
+				"updatedAt": null
+			}
+		},
+		{
+			"id": "019d0271-35c5-7646-9c4d-9a431c13bb42",
+			"name": "Clube do vira-lata caramelo",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-7c84-7d37-b341-889e6aed26cb",
+			"category": "Pet Lovers",
+			"productImage": {
+				"id": "019d0272-29cf-7f8b-9d09-21b1c890e45e",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019d0271-35c5-7646-9c4d-9a431c13bb42/019d0272-29cf-7f8b-9d09-21b1c890e45e.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-18T19:35:29.114112Z",
+				"updatedAt": null
+			}
+		},
+		{
+			"id": "019d2b93-16e8-7254-ac3c-bdab4cd4fc1f",
+			"name": "Mãe de dog",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-7c84-7d37-b341-889e6aed26cb",
+			"category": "Pet Lovers",
+			"productImage": {
+				"id": "019d2b96-adb1-7306-9279-8d8adc52aef8",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019d2b93-16e8-7254-ac3c-bdab4cd4fc1f/c059f582-993a-4ab3-a3f6-ae7de14b1101.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-26T19:19:48.183609Z",
+				"updatedAt": null
+			}
+		},
+		{
+			"id": "019d2b95-de96-7222-8725-c79582a06e03",
+			"name": "Mãe de gato",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-7c84-7d37-b341-889e6aed26cb",
+			"category": "Pet Lovers",
+			"productImage": {
+				"id": "019d2b97-dcc3-788b-a6f0-7c9858455fe4",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019d2b95-de96-7222-8725-c79582a06e03/7fadf4c8-5ace-44a5-827c-47d69c4a5892.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-26T19:21:05.717748Z",
+				"updatedAt": null
+			}
+		},
+		{
+			"id": "019cb50c-39b9-75f0-81a1-232116c505b6",
+			"name": "Nomes Femininos - Rosa",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-90a7-7d8d-b3f3-9283b7686597",
+			"category": "Nomes e iniciais",
+			"productImage": {
+				"id": "019cb50e-fe64-7891-9fa8-e2a0dabc0926",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019cb50c-39b9-75f0-81a1-232116c505b6/019cb50e-fe64-7891-9fa8-e2a0dabc0926.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-03T18:56:24.099278Z",
+				"updatedAt": null
+			}
+		},
+		{
+			"id": "019cb50d-1d75-71c5-b82d-f9dda6bdd686",
+			"name": "Nomes Femininos - Laranja",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-90a7-7d8d-b3f3-9283b7686597",
+			"category": "Nomes e iniciais",
+			"productImage": {
+				"id": "019cb50f-ac86-7f7d-ae97-eb12c901436e",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019cb50d-1d75-71c5-b82d-f9dda6bdd686/019cb50f-ac86-7f7d-ae97-eb12c901436e.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-03T18:57:08.886747Z",
+				"updatedAt": null
+			}
+		},
+		{
+			"id": "019cb50d-7e4f-7364-8b15-77b770c81272",
+			"name": "Nomes Femininos - Azul",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-90a7-7d8d-b3f3-9283b7686597",
+			"category": "Nomes e iniciais",
+			"productImage": {
+				"id": "019cb50f-fcb7-77b7-9add-00b3f2fb631c",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019cb50d-7e4f-7364-8b15-77b770c81272/019cb50f-fcb7-77b7-9add-00b3f2fb631c.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-03T18:57:29.536081Z",
+				"updatedAt": null
+			}
+		},
+		{
+			"id": "019cb50d-d57f-7d7b-b982-225a8a91a007",
+			"name": "Nomes Femininos - Lilás",
+			"priceInCents": 4000,
+			"discountPercentage": 10,
+			"productCategoryId": "019cb160-90a7-7d8d-b3f3-9283b7686597",
+			"category": "Nomes e iniciais",
+			"productImage": {
+				"id": "019cb510-7d54-7d33-b88b-08f545086f50",
+				"imageUrl": "https://cdn.autorialoja.com.br/products/019cb50d-d57f-7d7b-b982-225a8a91a007/019cb510-7d54-7d33-b88b-08f545086f50.png",
+				"displayOrder": 1,
+				"createdAt": "2026-03-03T18:58:02.450688Z",
+				"updatedAt": null
+			}
 		}
 	],
   "totalPages": 1,
