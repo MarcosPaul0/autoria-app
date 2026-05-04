@@ -211,21 +211,6 @@
 			}
 		},
 		{
-			"id": "019d2b86-30f4-76e3-9ce5-20cb4e489625",
-			"name": "São Carlo Acutis - Não eu, mas Deus",
-			"priceInCents": 4000,
-			"discountPercentage": 10,
-			"productCategoryId": "019cb160-43b3-7c7d-af53-5323918e7c5a",
-			"category": "Fé no dia a dia",
-			"productImage": {
-				"id": "019d2b86-66b6-7783-b335-1d90ea438ccc",
-				"imageUrl": "https://cdn.autorialoja.com.br/products/019d2b86-30f4-76e3-9ce5-20cb4e489625/832b86e4-0c5f-4688-b00e-d574eb1d7463.png",
-				"displayOrder": 1,
-				"createdAt": "2026-03-26T19:02:01.331305Z",
-				"updatedAt": null
-			}
-		},
-		{
 			"id": "019d2b87-3344-7f0d-96af-090c678f1cd7",
 			"name": "Valei-me São José!",
 			"priceInCents": 4000,
