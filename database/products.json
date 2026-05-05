@@ -256,23 +256,8 @@
 			}
 		},
 		{
-			"id": "019cb4f6-f652-7535-9f45-a66609ee5cd5",
-			"name": "Para uso exclusivo da melhor mãe do mundo (verde)",
-			"priceInCents": 4000,
-			"discountPercentage": 10,
-			"productCategoryId": "019cb160-a2fc-76f6-9bf2-0d82fabf9a0b",
-			"category": "Dia das mães",
-			"productImage": {
-				"id": "019cb508-bbe6-70da-a560-2f5eeb02d3f4",
-				"imageUrl": "https://cdn.autorialoja.com.br/products/019cb4f6-f652-7535-9f45-a66609ee5cd5/019cb508-bbe6-70da-a560-2f5eeb02d3f4.png",
-				"displayOrder": 1,
-				"createdAt": "2026-03-03T18:49:33.962521Z",
-				"updatedAt": null
-			}
-		},
-		{
 			"id": "019cb4fb-5c3f-7584-a5e8-8b654b126fe3",
-			"name": "\tPara uso exclusivo da melhor mãe do mundo (rosa)",
+			"name": "\tPara uso exclusivo da melhor mãe do mundo",
 			"priceInCents": 4000,
 			"discountPercentage": 10,
 			"productCategoryId": "019cb160-a2fc-76f6-9bf2-0d82fabf9a0b",
@@ -282,21 +267,6 @@
 				"imageUrl": "https://cdn.autorialoja.com.br/products/019cb4fb-5c3f-7584-a5e8-8b654b126fe3/019cb509-3e00-7c9f-bb92-6b33453ae76e.png",
 				"displayOrder": 1,
 				"createdAt": "2026-03-03T18:50:07.4797Z",
-				"updatedAt": null
-			}
-		},
-		{
-			"id": "019cb4fb-c1f2-7940-94c9-85acb6ac2355",
-			"name": "Para uso exclusivo da melhor mãe do mundo (laranja)",
-			"priceInCents": 4000,
-			"discountPercentage": 10,
-			"productCategoryId": "019cb160-a2fc-76f6-9bf2-0d82fabf9a0b",
-			"category": "Dia das mães",
-			"productImage": {
-				"id": "019cb509-a6c2-72cc-a8a9-b6d741065833",
-				"imageUrl": "https://cdn.autorialoja.com.br/products/019cb4fb-c1f2-7940-94c9-85acb6ac2355/019cb509-a6c2-72cc-a8a9-b6d741065833.png",
-				"displayOrder": 1,
-				"createdAt": "2026-03-03T18:50:34.232146Z",
 				"updatedAt": null
 			}
 		},
